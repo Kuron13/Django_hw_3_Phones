@@ -15,5 +15,4 @@ class Command(BaseCommand):
 
         for phone in phones:
             # TODO: Добавьте сохранение модели
-            print(f'Телефон: {phone}')
-            Phone(id=int(phone['id']), name=phone['name'], price=int(phone['price']), image=phone['image'], release_date=datetime.datetime.strptime(phone['release_date'], '%Y-%m-%d'), lte_exists=bool(phone['lte_exists'])).save()
+            Phone(id=int(phone['id']), name=phone['name'], price=float(phone['price']), image=phone['image'], release_date=datetime.datetime.strptime(phone['release_date'], '%Y-%m-%d'), lte_exists=bool(phone['lte_exists'])).save()
